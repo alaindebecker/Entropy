@@ -11,3 +11,9 @@ qui affirme que toute famille finie d’ensemble stable par union contient un é
 
 La seconde est une démonstration d'une conjecture de Marton, qui fournit une version quantitative optimale du théorème de Freiman sur 
 la structure des sous-ensembles de $F_2^n$ ayant une petite somme.
+
+Note
+----
+Dans tout ce cours, les variables aléatoires sont suposées discrètes et même à support fini. 
+De fait, ce cours s'intéresse surtout aux variables qui prennent leurs valeurs dans un 
+ensemble fini.
