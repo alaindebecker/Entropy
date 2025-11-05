@@ -5,27 +5,26 @@ On cherche à quantifier l'information apportée par l'observation d'une  variab
 
 Or, il est naturel de penser que l'information apportée par l'observation conjointe de deux 
 évenements indépendants $A$ et $B$ est la somme des informations apportées par chacun 
-d'eux : $H(A \cap B) = H(A) + H(B)$. Et comme on a  $P(A \cap B) = P(A) P(B)$ pour les évenements 
-indépendants, il suffit de prendre $H(A) = \log{P(A)}$ et $H(B) = \log{P(B})$ pour avoir
-une information additive sur les évenements.
+d'eux : $H(A \cap B) = H(A) + H(B)$. Et comme on a  $P(A \cap B) = P(A) P(B)$, car les évenements 
+sont indépendants, il suffit d'en prendre les logarithmes pour avoir une information additive : 
+$H(A \cap B) = \log(P(A \cap B)) = \log(P(A)) + \log(P(B)) = H(A)+H(B)$. 
 
-Maintenant, pour une 
+C<eci ammène à définir l'entropie d'une variable aléatoire quelconque comme étant la moyenne du 
+logarithme des probabilités élementaires $\log(P(X=a)) = \log(p_a)$. 
 
+**Définition:** *L'entropie de Shannon d'une variable aléatoire* $X$ *à valeur sur un ensemble* $A$*, 
+est définie par*
 
+$$\begin{aligned}
+       H(X)   &= \sum_{x \in A} P(X=a) \log_2 \left( \frac{1}{P(X=a)} \right) \\
+              &= \sum_{x \in A} p_a \log_2 \left( \frac{1}{p_a} \right) \\
+              &= -\sum_{x \in A} p_a \log_2 {p_a}.
+\end{aligned}$$
 
-**Définition** Si $X$ est une variable aléatoire sur un ensemble $A$, 
-son *entropie de Shannon* est définie par
+Les prochains chapitres sont consacrés à une vérification formelle de cette définition, ainsi que les 
+raisons du choix du signe et de la base du logarithme.
 
-$$H(X) = \sum_{x \in A} P(X=a) \log_2 \left( \frac{1}{P(X=a)} \right).$$
+En attendant, citons immédiatement un lemme pour calculer l'entropie 
 
-On pose souvent $p_a = P(X=a)$, de sorte que cette formule se réécrit
+**Lemme:** *Lorsque loi de la variable aléatoire* $X$ *est connue par un échantillon* $x_1, x_2, \cdots x_n$   
 
-$$H(X) = \sum_{x \in A} p_a \log_2 \left( \frac{1}{p_a} \right) 
-       = - \sum_{x \in A} p_a \log_2 {p_a}. $$
-
-Dans cette dernière expression, le signe $-$ vient du fait que $p_a\le1$
-et donc que son logarithme est négatif.
-
-Cette formule loin de tomber du ciel est la seule à vérifier un certain 
-nombre de propriétés qui seront exposées un peu plus loin. L'idée de 
-Shannon était de mesurer l'information apportée par le variable aléagtoire $X$.
