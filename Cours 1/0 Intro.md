@@ -1,0 +1,13 @@
+L'entropie de Shannon
+=====================
+
+L'entropie de Shannon, définie pour une distribution de probabilité discrète, est un concept fondamental de la théorie de l'information. 
+Elle s’avère également être un outil étonnamment utile pour démontrer des théorèmes en combinatoire. 
+Ce cours présentera plusieurs utilisations de cette technique : La première moitié sera consacrée à la combinatoire extrémale, 
+la seconde à la combinatoire additive. 
+
+Deux percées récentes seront mises en avant. La première constitue un progrès majeur vers la conjecture des familles stables par union, 
+qui affirme que toute famille finie d’ensemble stable par union contient un élément présent dans au moins la moitié des ensembles. 
+
+La seconde est une démonstration d'une conjecture de Marton, qui fournit une version quantitative optimale du théorème de Freiman sur 
+la structure des sous-ensembles de $F_2^n$ ayant une petite somme.
