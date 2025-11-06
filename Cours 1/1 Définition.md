@@ -30,9 +30,23 @@ En attendant, citons immédiatement un lemme permettant de calculer l'entropie d
 **Lemme:** *Lorsque loi de la variable aléatoire* $X$ *est connue par un échantillon* $x_1, x_2, \cdots x_n$ 
 *dans lequel la variable prend* $n_i$ *fois la valeur* $x_i$*, son entropie vaut*
 
-$$H(x) = \log_2(N) - \frac 1 {N} \sum_i{n_i \log_2 n_i}, \quad \textit{dans laquelle} \quad N = \sum_i n_i.$$
+$$H(x) = \log_2(n) - \frac 1 {n} \sum_i{n_i \log_2 n_i}, \quad \textit{dans laquelle} \quad n = \sum_i n_i.$$
+
+La preuve consiste à réécrire la formule de Shannon avec $p_i=n_i/n$ :
+
+$$ H(X) = \sum_i \frac{n_i}{n} \log \frac{n}{n_i} 
+        = \frac{1}{n} \sum_i n_i ( \log n - \log n_i )
+        = \frac{1}{n} \sum_i n_i \log n - \frac{1}{n} \sum_i n_i \log n_i
+$$
+
+Le lemme s'en déduit immédiatement en factorisant $\log n$ dans la première somme, 
+puis en remarquant que $\sum n_i = n$.
 
 
+Références:
+-----------
+- C. E. SHANNON, *A Mathematical Theory of Communication*, The Bell System Technical Journal, 
+Vol. 27, pp. 379–423, 623–656, July, October, 1948.
 
 
 
