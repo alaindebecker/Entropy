@@ -1,7 +1,7 @@
 (1.1) Définition
 ================
 
-On cherche à quantifier l'information apportée par l'observation d'une  variable aléatoire. 
+On cherche à quantifier l'information apportée par l'observation d'une variable aléatoire. 
 
 Or, il est naturel de penser que l'information apportée par l'observation conjointe de deux 
 évenements indépendants $A$ et $B$ est la somme des informations apportées par chacun 
@@ -9,10 +9,11 @@ d'eux : $H(A \cap B) = H(A) + H(B)$. Et comme on a  $P(A \cap B) = P(A) P(B)$, c
 sont indépendants, il suffit d'en prendre les logarithmes pour avoir une information additive : 
 $H(A \cap B) = \log(P(A \cap B)) = \log(P(A)) + \log(P(B)) = H(A)+H(B)$. 
 
-C<eci ammène à définir l'entropie d'une variable aléatoire quelconque comme étant la moyenne du 
-logarithme des probabilités élementaires $\log(P(X=a)) = \log(p_a)$. 
+L'information portée par la variable $X$ devant être quantifiée par un nombre unique qui dépend 
+uniquement de sa distribution, et non des valeurs prises par $X$ en est ammené à définir l'entropie 
+comme la moyenne des logarithme des probabilités élementaires $\log(P(X=a)) = \log(p_a)$. 
 
-**Définition:** *L'entropie de Shannon d'une variable aléatoire* $X$ *à valeur sur un ensemble* $A$*, 
+**Définition (Shannon, 1948):** *L'**entropie de Shannon** d'une variable aléatoire* $X$ *à valeur sur un ensemble* $A$*, 
 est définie par*
 
 $$\begin{aligned}
@@ -21,10 +22,18 @@ $$\begin{aligned}
               &= -\sum_{x \in A} p_a \log_2 {p_a}.
 \end{aligned}$$
 
-Les prochains chapitres sont consacrés à une vérification formelle de cette définition, ainsi que les 
-raisons du choix du signe et de la base du logarithme.
+Les prochains chapitres sont consacrés à une redéfinition de l'entropie plus intuitive, basée sur 
+ses propriétés élémentaire, et d'une discution sur le choix de la base du logarithme.
 
-En attendant, citons immédiatement un lemme pour calculer l'entropie 
+En attendant, citons immédiatement un lemme permettant de calculer l'entropie d'une distribution empirique.
 
-**Lemme:** *Lorsque loi de la variable aléatoire* $X$ *est connue par un échantillon* $x_1, x_2, \cdots x_n$   
+**Lemme:** *Lorsque loi de la variable aléatoire* $X$ *est connue par un échantillon* $x_1, x_2, \cdots x_n$ 
+*dans lequel la variable prend* $n_i$ *fois la valeur* $x_i$*, son entropie vaut*
+
+$$H(x) = \log_2(N) - \frac 1 {N} \sum_i{n_i \log_2 n_i}, \quad \textit{dans laquelle} \quad N = \sum_i n_i.$$
+
+
+
+
+
 
